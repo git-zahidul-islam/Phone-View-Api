@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone View API</title>
+    <!-- daisy khala added -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="container mx-auto">
+        <!-- search ber -->
+        <section class="bg-gray-200 py-4 mt-2 flex justify-center gap-3">
+            <input id="search-field" type="text" placeholder="Search ...."
+                class="input input-bordered w-full max-w-xs" />
+            <button onclick="handelSearch()" class="btn btn-accent">Search</button>
+        </section>
+        <!-- items section -->
+        <section class="mt-6">
+            <!-- loading  -->
+            <div id="loading-button" class="my-24 text-center hidden">
+                <span class="loading loading-infinity loading-lg bg-orange-500"></span>
+            </div>
+
+            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 px-3">
+            </div>
+            <div id="phone-showing" class="hidden">
+                <button class="btn btn-active btn-primary">Primary</button>
+            </div>
+        </section>
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="">open modal</button>   -->
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box ">
+                    <div class="flex justify-center bg-[#0D6EFD0D]" id="modal-img"></div>
+                    <h3 id="show-details-phone-name" class="font-bold text-lg"></h3>
+                    <div id="phone-others-details"></div>
+                    <div class="modal-action flex justify-center">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <footer></footer>
+    <!-- script added -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>
